@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Product from "./Product";
 import { ProductsProps } from "@/types/types";
 import { IoIosSearch } from "react-icons/io";
+import { useSearchParams } from "next/navigation";
 
 export async function getStaticProps() {
     try {
@@ -28,17 +29,20 @@ export async function getStaticProps() {
         };
     }
 }
+export function useInitialFilter() {
+    const searchParams = useSearchParams();
+    const initialFilter = searchParams.get("type") || "";
+    return initialFilter.toLowerCase();
+}
 interface ProductDisplayProps {
     handleProductClick: (product: ProductsProps) => void;
 }
 
 export default function ProductDisplay({ handleProductClick }: ProductDisplayProps) {
-    
     const [data, setData] = useState<ProductsProps[]>();
     const [error, setError] = useState<string | null>(null);
-    const [type, setType] = useState<string>("any");
+    const [type, setType] = useState<string>(useInitialFilter());
     const [filter, setFilter] = useState<string>("");
-
 
 
     const handleRadioClick = (value: string) => {

@@ -2,9 +2,12 @@
 import ProductDisplay from "./_components/ProductDisplay";
 import { useState } from "react";
 import { ProductsProps } from "@/types/types";
+
 import Modal from "./_components/Modal";
 import Image from "next/image";
 import FullBg from "@/public/full-bg.png";
+
+
 
 export default function Produtos(){
     const [selectedProduct, setSelectedProduct] = useState<ProductsProps|null>(null);
