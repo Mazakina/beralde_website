@@ -55,7 +55,7 @@ export default function MainHeader() {
                 className={`flex transition-all duration-200 justify-between ${isVisible ? "opacity-100 delay-150" : "opacity-0 "}`}
             >
                 <Link
-                    href={"https://w.app/beralde"} target="_blank"
+                    href={"./"}
                     className="
                         ml-4
                         relative text-lg after:absolute after:bottom-0 after:left-0 
@@ -64,7 +64,7 @@ export default function MainHeader() {
                         text-nowrap font-medium text-center sm:text-left
                     "
                 >
-                    Vire um cliente
+                    Home
                 </Link>
                 <Link
                     href={"./produtos"}
@@ -89,6 +89,18 @@ export default function MainHeader() {
                     "
                 >
                     Sobre nós
+                </Link>
+                <Link
+                    href={"https://w.app/beralde"} target="_blank"
+                    className="
+                        ml-4
+                        relative text-lg after:absolute after:bottom-0 after:left-0 
+                        after:w-0 after:h-1 after:bg-baseblue after:content-[''] 
+                        after:transition-all after:duration-300 hover:after:w-full 
+                        text-nowrap font-medium text-center sm:text-left
+                    "
+                >
+                    Vire um cliente
                 </Link>
             </div>
         </header>

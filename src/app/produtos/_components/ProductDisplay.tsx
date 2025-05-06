@@ -5,6 +5,29 @@ import Product from "./Product";
 import { ProductsProps } from "@/types/types";
 import { IoIosSearch } from "react-icons/io";
 
+export async function getStaticProps() {
+    try {
+        const response = await fetch("https://your-api-endpoint.com/api/fetchSupabaseData");
+        if (!response.ok) {
+            throw new Error("Failed to fetch data");
+        }
+        const data = await response.json();
+
+        return {
+            props: {
+                data,
+            },
+            revalidate: 86400, // Revalidate every 24 hours
+        };
+    } catch (error) {
+        console.error("Error fetching data:", error);
+        return {
+            props: {
+                data: [],
+            },
+        };
+    }
+}
 interface ProductDisplayProps {
     handleProductClick: (product: ProductsProps) => void;
 }
@@ -52,7 +75,7 @@ export default function ProductDisplay({ handleProductClick }: ProductDisplayPro
         return null;
     }
     return (
-        <div className="relative w-[95%] min-h-screen lg:w-[90%] xl:w-4/5 mx-auto mb-auto justify-center flex flex-col items-center">
+        <div className="relative w-[95%] min-h-screen lg:w-[90%] border-none xl:w-4/5 mx-auto mb-auto pb-16 justify-center flex flex-col items-center">
             <h2 className="font-bold text-4xl mb-10 mt-14">Nossos Produtos</h2>
           
             <section id="filter" className=" w-full md:flex  bg-white border border-gray-300 rounded-md p-4 shadow-md">
@@ -108,7 +131,7 @@ export default function ProductDisplay({ handleProductClick }: ProductDisplayPro
                     }
                 }}
             >
-                {data?.map((product: ProductsProps) => (
+                {data?.sort((a, b) => a.name.localeCompare(b.name)).map((product: ProductsProps) => (
                     (type === "any" && product.name.toLowerCase().includes(filter) || product.type === type && product.name.toLowerCase().includes(filter)) && (
                         <Product
                             product={product}

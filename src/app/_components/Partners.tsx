@@ -24,9 +24,9 @@ import { useState } from "react";
             <div className="flex bg-white text-black flex-col items-center justify-center w-full ">
                 <h2 className="px-6 text-5xl my-8 text-center">Você está em boa companhia!</h2>
                 <span className="text-4xl px-4 text-center font-light max-w-[960px]">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                Parceiros em todo o estado confiam na Beralde para levar frescor e eficiência aos seus negócios.
                 </span>
-                <div className="md:flex px-4 lg:mx-auto md:flex-row grid grid-cols-2 gap-8 my-15 justify-between">
+                <div className="md:flex px-4 lg:mx-auto md:flex-row grid grid-cols-2 gap-8 my-15 pb-10 justify-between">
                     {[PartnerOne, PartnerTwo, PartnerThree, PartnerFour].map((partner, index) => (
                         <Image
                             key={index}

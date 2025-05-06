@@ -71,6 +71,11 @@ export function MobileHeader() {
                       />
                   </svg>
               </button>
+              <Link
+                  onClick={() => setIsDrawerOpen(false)}
+                  href={"./"} className="mb-4 text-lg font-medium text-gray-800">
+                  Home
+              </Link>
               <Link 
                   onClick={() => setIsDrawerOpen(false)}
                   href={"https://w.app/beralde"} target="_blank"  className="mb-4 text-lg font-medium text-gray-800">

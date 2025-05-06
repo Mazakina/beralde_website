@@ -30,7 +30,6 @@ export default function Produtos(){
             alt="background"
             />
 
-
             <div
             className="z-10 relative bg-white w-full flex justify-center items-center text-center"
             >
@@ -46,6 +45,13 @@ export default function Produtos(){
                     <Modal product={selectedProduct} onClose={closeModal} />
                 )}
             </div>
+            <Image
+                src="/planta.svg"
+                alt="Icone de planta"
+                className="z-10  absolute left-16 bottom-0 w-21 h-21"
+                width={84}
+                height={84}
+            />
         </section>
     )
 }

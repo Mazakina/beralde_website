@@ -50,19 +50,20 @@ export default function Footer() {
                         Home
                     </Link>
                     <Link 
-                        href="./"
+                        href="./produtos"
                         className="transition-all duration-200 hover:pl-3"
                     >
                         Produtos
                     </Link>
                     <Link 
-                        href="./"
+                        href="./sobrenos"
                         className="transition-all duration-200 hover:pl-3"
                     >
                         Sobre Nós
                     </Link>
                     <Link 
-                        href="./"
+                        href="https://w.app/beralde"
+                        target="_blank"
                         className="transition-all duration-200 hover:pl-3"
                     >
                         Contato

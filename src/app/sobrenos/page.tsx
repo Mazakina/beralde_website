@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { RiMedalLine } from "react-icons/ri";
+import { RiMedalLine,RiLeafLine } from "react-icons/ri";
+import { FaPeopleGroup } from "react-icons/fa6";
 import historia from "@/public/historia.png";
 import FullBg from "@/public/full-bg.png";
 import Contact from "../_components/Contact";
@@ -31,12 +32,12 @@ export default function AboutUs() {
                         <span className="text-center text-sm">Comprometidos com os mais altos padrões em todos os nossos produtos.</span>
                     </div>
                     <div className="flex w-[315px] gap-2 flex-col items-center rounded-2xl p-5 text-[#14532D] bg-white">
-                        <RiMedalLine className="w-11 h-11 text-[#389636]"/> 
+                        <RiLeafLine className="w-11 h-11 text-[#389636]"/> 
                         <h5 className="text-center text-base font-medium">Sustentabilidade</h5>
                         <span className="text-center text-sm">Priorizamos práticas agrícolas que protegem o meio ambiente.</span>
                     </div>
                     <div className="flex w-[315px] gap-2 flex-col items-center rounded-2xl p-5 text-[#14532D] bg-white">
-                        <RiMedalLine className="w-11 h-11 text-[#389636]"/> 
+                        <FaPeopleGroup className="w-11 h-11 text-[#389636]"/> 
                         <h5 className="text-center text-base font-medium">Comunidade</h5>
                         <span className="text-center text-sm">Apoiamos nossos agricultores locais e as comunidades que servimos.</span>
                     </div>

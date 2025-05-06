@@ -1,10 +1,21 @@
+import Image from "next/image";
+
 export default function Process() {
     return (
         <section className="w-full  bg-c-bg h-fit md:h-[560px] flex flex-col relative text-black">
-            <img
+            <Image
                 src="/sun.svg"
                 alt="Icone de sol"
-                className="absolute  right-0 top-0 w-80 h-80"
+                className="absolute right-0 top-0 w-64 h-64"
+                width={256}
+                height={256}
+            />
+            <Image
+                src="/planta.svg"
+                alt="Icone de planta"
+                className="z-10  absolute left-16 bottom-0 w-21 h-21"
+                width={84}
+                height={84}
             />
             <h2 className="font-bold z-10 text-black pt-8 text-[40px] w-fit text-nowrap mx-auto my-auto">Nosso Processo</h2>
             <div className="grid mt-10 my-auto grid-cols-1 md:grid-cols-3 pb-12 w-full px-20 relative">
