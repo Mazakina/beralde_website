@@ -41,6 +41,7 @@ export default function ProductDisplay({ handleProductClick }: ProductDisplayPro
                 } else {
                     setError("An unknown error occurred");
                 }
+                console.log(error)
             }
         };
 
