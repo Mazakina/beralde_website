@@ -33,6 +33,8 @@ export default function MainHeader() {
             className={` grid grid-cols-2 z-30 fixed shadow-2xl mt-3 mx-20 py-4 pl-8 pr-20 rounded-4xl text-baseblue gap-[32px] row-start-2 items-center transition-all duration-300 
                 ${isVisible ? "w-[calc(100vw-160px)] bg-white" : "w-[300px] bg-baseblue delay-75 "}
                 ${interFont}`}
+                onMouseEnter={() => setIsVisible(true)}
+                
         >
             <Link
                 href={"./"}
@@ -40,7 +42,6 @@ export default function MainHeader() {
                 text-2xl ml-1 flex justify-center items-center text-nowrap font-semibold text-center text-gray-800 sm:text-left mr-auto
                  ${isVisible ? "text-gray-800" : "text-white "}
                 `}
-                onMouseEnter={() => setIsVisible(true)}
             >
                 <Image
                     className="mr-2 -my-3 hover:brightness-110 h-full transition-all duration-200"
