@@ -104,7 +104,7 @@ function ProductDisplayContent({ handleProductClick }: ProductDisplayProps) {
                                 {label}
                             </label>
                         </div>
-                    ))}
+                    ))} 
                 </div>
             </section>
             <section
@@ -120,17 +120,17 @@ function ProductDisplayContent({ handleProductClick }: ProductDisplayProps) {
                     ?.sort((a, b) => a.name.localeCompare(b.name))
                     .map(
                         (product: ProductsProps) =>
-                            ((type === "any" &&
+                            ((type === "" || type === "any") &&
                                 product.name.toLowerCase().includes(filter)) ||
                                 (product.type === type &&
-                                    product.name.toLowerCase().includes(filter))) && (
+                                    product.name.toLowerCase().includes(filter)) ? (
                                 <Product
                                     product={product}
                                     handleProductClick={handleProductClick}
                                     key={product.id}
                                     {...product}
                                 />
-                            )
+                            ) : null
                     )}
             </section>
         </div>
