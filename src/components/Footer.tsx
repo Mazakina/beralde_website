@@ -15,7 +15,7 @@ export default function Footer() {
             <div className="md:grid flex flex-col-reverse gap-4 w-full md:grid-cols-[1fr_200px_1fr]">
                 <div className="flex flex-col mx-auto gap-2">
                     <h4 className="text-baseblue text-2xl font-bold">Entre em Contato</h4>
-                    <p className="group flex items-center"><IoMdMail className="mr-2"/>Beraldeverduras@beralde.com</p>
+                    <p className="group flex items-center"><IoMdMail className="mr-2"/>Beraldeverduras@beralde.com.br</p>
                     <p className="group flex items-center"><FaPhone className="mr-2"/>(11) 94111-3536</p>
                     <p className="group flex items-center"><FaPhone className=" mr-2"/>(11) 96080-7100</p>
                     <Link 
