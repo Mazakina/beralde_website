@@ -36,7 +36,7 @@ export default function AboutUs() {
                 <h3 className={" text-3xl md:text-4xl font-semibold "+ interFont}>Com nossos parceiros</h3>
                 <p className="text-2xl">A <span className="text-baseblue font-bold">Beralde verduras</span> garante uma dedicação constante para que receba os melhores produtos.<br/><br /> Direto de Ibiúna - uma das regiões agrícolas mais respeitadas de São Paulo.</p>
                 <h3 className={"text-3xl md:text-4xl font-semibold "+ interFont}>Apoiada por <span className="text-baseblue font-bold">décadas</span> de experiência</h3>
-                <p className="text-2xl">Desde 2006, fornecemos verduras frescas para empresas na Grande São Paulo, com mais de 90 anos de tradição no campo.</p>
+                <p className="text-2xl">Desde 2006, fornecemos verduras frescas para empresas na Grande São Paulo, com mais de 15 anos de tradição no campo.</p>
             </div>
         </div>
     )

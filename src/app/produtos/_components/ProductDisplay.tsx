@@ -1,49 +1,26 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import Product from "./Product";
 import { ProductsProps } from "@/types/types";
 import { IoIosSearch } from "react-icons/io";
 import { useSearchParams } from "next/navigation";
 
-export async function getStaticProps() {
-    try {
-        const response = await fetch("https://your-api-endpoint.com/api/fetchSupabaseData");
-        if (!response.ok) {
-            throw new Error("Failed to fetch data");
-        }
-        const data = await response.json();
-
-        return {
-            props: {
-                data,
-            },
-            revalidate: 86400, // Revalidate every 24 hours
-        };
-    } catch (error) {
-        console.error("Error fetching data:", error);
-        return {
-            props: {
-                data: [],
-            },
-        };
-    }
-}
 export function useInitialFilter() {
     const searchParams = useSearchParams();
     const initialFilter = searchParams.get("type") || "";
     return initialFilter.toLowerCase();
 }
+
 interface ProductDisplayProps {
     handleProductClick: (product: ProductsProps) => void;
 }
 
-export default function ProductDisplay({ handleProductClick }: ProductDisplayProps) {
+function ProductDisplayContent({ handleProductClick }: ProductDisplayProps) {
     const [data, setData] = useState<ProductsProps[]>();
     const [error, setError] = useState<string | null>(null);
     const [type, setType] = useState<string>(useInitialFilter());
     const [filter, setFilter] = useState<string>("");
-
 
     const handleRadioClick = (value: string) => {
         if (type === value) {
@@ -68,28 +45,32 @@ export default function ProductDisplay({ handleProductClick }: ProductDisplayPro
                 } else {
                     setError("An unknown error occurred");
                 }
-                console.log(error)
+                console.log(error);
             }
         };
 
         fetchData();
-    },[]);
+    }, []);
 
     if (typeof handleProductClick !== "function") {
         return null;
     }
+
     return (
         <div className="relative w-[95%] min-h-screen lg:w-[90%] border-none xl:w-4/5 mx-auto mb-auto pb-16 justify-center flex flex-col items-center">
             <h2 className="font-bold text-4xl mb-10 mt-14">Nossos Produtos</h2>
-          
-            <section id="filter" className=" w-full md:flex  bg-white border border-gray-300 rounded-md p-4 shadow-md">
+
+            <section
+                id="filter"
+                className="w-full md:flex bg-white border border-gray-300 rounded-md p-4 shadow-md"
+            >
                 <div className="mb-4 md:mb-2 mr-4 flex flex-1 items-center border border-gray-400 rounded focus-within:border-green-400">
                     <input
                         type="text"
                         placeholder="Pesquisar"
                         className="pl-2 pr-2 py-[1px] outline-none w-full"
                         onChange={(e) => {
-                            setFilter(()=> e.target.value.toLowerCase());
+                            setFilter(() => e.target.value.toLowerCase());
                         }}
                     />
                     <IoIosSearch className="text-gray-500 mr-2" />
@@ -110,7 +91,7 @@ export default function ProductDisplay({ handleProductClick }: ProductDisplayPro
                                 checked={type === id}
                                 readOnly
                                 onClick={() => handleRadioClick(id)}
-                                />
+                            />
                             <label
                                 htmlFor={id}
                                 className="cursor-pointer text-xs px-4 py-[5px]
@@ -127,7 +108,7 @@ export default function ProductDisplay({ handleProductClick }: ProductDisplayPro
                 </div>
             </section>
             <section
-                className="w-full grid  sm:grid-cols-2 md:grid-cols-3 my-auto mb-auto mt-6 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-10 pb-12 overflow-y-auto"
+                className="w-full grid sm:grid-cols-2 md:grid-cols-3 my-auto mb-auto mt-6 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-10 pb-12 overflow-y-auto"
                 onScroll={(e) => {
                     const target = e.target as HTMLDivElement;
                     if (target.scrollHeight - target.scrollTop === target.clientHeight) {
@@ -135,17 +116,31 @@ export default function ProductDisplay({ handleProductClick }: ProductDisplayPro
                     }
                 }}
             >
-                {data?.sort((a, b) => a.name.localeCompare(b.name)).map((product: ProductsProps) => (
-                    (type === "any" && product.name.toLowerCase().includes(filter) || product.type === type && product.name.toLowerCase().includes(filter)) && (
-                        <Product
-                            product={product}
-                            handleProductClick={handleProductClick}
-                            key={product.id}
-                            {...product}
-                        />
-                    )
-                ))}
+                {data
+                    ?.sort((a, b) => a.name.localeCompare(b.name))
+                    .map(
+                        (product: ProductsProps) =>
+                            ((type === "any" &&
+                                product.name.toLowerCase().includes(filter)) ||
+                                (product.type === type &&
+                                    product.name.toLowerCase().includes(filter))) && (
+                                <Product
+                                    product={product}
+                                    handleProductClick={handleProductClick}
+                                    key={product.id}
+                                    {...product}
+                                />
+                            )
+                    )}
             </section>
         </div>
+    );
+}
+
+export default function ProductDisplay(props: ProductDisplayProps) {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <ProductDisplayContent {...props} />
+        </Suspense>
     );
 }
