@@ -19,7 +19,7 @@ export default function AboutUs() {
             <section className=" z-10 w-full relative h-[376px] flex flex-col items-center justify-center">
                 <Image src={historia} alt="Imagem de fundo da sede da Beralde verduras" layout="fill"  className="absolute object-cover" />
                 <h2 className="z-20 text-4xl md:text-5xl mb-8 text-white">Nossa História</h2>
-                <span className="z-20 mx-4 text-center text-2xl md:text-4xl font-medium text-white">Cultivando qualidade e confiança desde 1999</span>
+                <span className="z-20 mx-4 text-center text-2xl md:text-4xl font-medium text-white">Cultivando qualidade e confiança desde 2006</span>
             </section>
             <div className=" z-10 h-[50px] w-full bg-white"/>
             {/* <JourneySection/> */}
