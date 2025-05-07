@@ -1,6 +1,7 @@
 import { ProductMapper, ProductsProps } from "@/types/types";
 import Image from "next/image";
 import { CgCloseR } from "react-icons/cg";
+import { MdOutlineImageNotSupported } from "react-icons/md";
 
 interface ModalProps{
     product: ProductsProps;
@@ -20,8 +21,12 @@ export default function Modal({product, onClose}:ModalProps){
                 </div>
                 <div className="h-[2px]  mt-3 mb-2 transition-all bg-gray-300 w-full "/>
                 <div className="grid md:grid-cols-2 grid-rows-2 md:grid-rows-1 h-[80%] py-2 px-8">
-                    <div className="col-span-1 row-span-1 w-full h-full min-h-[160px] relative">
-                        <Image className="object-contain" src={imagePath} fill alt={""} />
+                    <div className="col-span-1 row-span-1 w-full flex justify-center items-center h-full min-h-[160px] relative">
+                        {imagePath?
+                            <Image className="object-contain" src={imagePath} fill alt={""}/>:
+                            <MdOutlineImageNotSupported className="text-gray-300 m-auto w-40 h-40"/>
+                        }
+
                     </div>
                     <div className="flex flex-col ml-2 mr-auto items-start justify-around">
                         <span className="text-left" style={{ textAlign: "left" }}>{description}</span>

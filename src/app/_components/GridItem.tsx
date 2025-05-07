@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Url } from "url";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { MotionLink } from "@/lib/MotionLink";
+import { MotionLink } from "@/lib/MotionNextComponents";
 
 interface GridItemProps {
     src: StaticImageData | string;

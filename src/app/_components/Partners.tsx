@@ -26,15 +26,15 @@ import { useState } from "react";
                 <span className="text-4xl px-4 text-center font-light max-w-[960px]">
                 Parceiros em todo o estado confiam na Beralde para levar frescor e eficiência aos seus negócios.
                 </span>
-                <div className="md:flex px-4 lg:mx-auto md:flex-row grid grid-cols-2 gap-8 my-15 pb-10 justify-between">
+                <div className="md:grid md:grid-cols-2 grid grid-cols-2  my-15 pb-10 justify-between">
                     {[PartnerOne, PartnerTwo, PartnerThree, PartnerFour].map((partner, index) => (
                         <Image
                             key={index}
                             src={partner.src}
                             alt={`Partner ${index + 1}`}
-                            width={240}
-                            height={166}
-                            className="transition-transform duration-300 hover:scale-120 cursor-pointer"
+                            height={400}
+                            width={900}
+                            className="transition-transform duration-300 h-70 object-cover hover:scale-110 cursor-pointer"
                             onClick={() => openModal(partner.src)}
                         />
                     ))}
@@ -48,8 +48,8 @@ import { useState } from "react";
                             <Image
                                 src={selectedImage}
                                 alt="Selected Partner"
-                                width={480}
-                                height={332}
+                                width={720}
+                                height={498}
                                 className="rounded-lg"
                             />
                             <button

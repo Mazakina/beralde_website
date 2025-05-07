@@ -76,11 +76,7 @@ export function MobileHeader() {
                   href={"./"} className="mb-4 text-lg font-medium text-gray-800">
                   Home
               </Link>
-              <Link 
-                  onClick={() => setIsDrawerOpen(false)}
-                  href={"https://w.app/beralde"} target="_blank"  className="mb-4 text-lg font-medium text-gray-800">
-                  Vire um cliente
-              </Link>
+
               <Link
                   onClick={() => setIsDrawerOpen(false)}
                   href={"./produtos"} className="mb-4 text-lg font-medium text-gray-800">
@@ -91,7 +87,11 @@ export function MobileHeader() {
                   href={"./sobrenos"} className="mb-4 text-lg font-medium text-gray-800">
                   Sobre nós
               </Link>
-             
+              <Link 
+                  onClick={() => setIsDrawerOpen(false)}
+                  href={"https://w.app/beralde"} target="_blank"  className="mb-4 text-lg font-medium text-gray-800">
+                  Vire um cliente
+              </Link>
           </motion.div>
       </header>
   );
