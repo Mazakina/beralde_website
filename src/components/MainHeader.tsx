@@ -31,7 +31,7 @@ export default function MainHeader() {
     return (
         <header
             className={` grid grid-cols-2 z-30 fixed shadow-2xl mt-3 mx-20 py-4 pl-8 pr-20 rounded-4xl text-baseblue gap-[32px] row-start-2 items-center transition-all duration-300 
-                ${isVisible ? "w-[calc(100vw-160px)] bg-white" : "w-[300px] bg-baseblue delay-75 "}
+                ${isVisible ? "md:w-[calc(100vw-160px)] bg-white" : "w-[300px] bg-baseblue delay-75 "}
                 ${interFont}`}
                 onMouseEnter={() => setIsVisible(true)}
                 

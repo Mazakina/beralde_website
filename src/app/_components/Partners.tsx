@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import PartnerOne from "@/public/parceiros/01.png";
-import PartnerTwo from "@/public/parceiros/02.png";
-import PartnerThree from "@/public/parceiros/03.png";
-import PartnerFour from "@/public/parceiros/04.png";   
+import PartnerOne from "@/public/parceiros/01.jpeg";
+import PartnerTwo from "@/public/parceiros/02.jpeg";
+import PartnerThree from "@/public/parceiros/03.jpeg";
+import PartnerFour from "@/public/grid/Tomate.jpeg";   
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -37,11 +37,11 @@ import { motion } from "framer-motion";
                 className="text-4xl px-4 text-center font-light max-w-[960px]">
                 Parceiros em todo o estado confiam na Beralde para levar frescor e eficiência aos seus negócios.
                 </motion.span>
-                <div className="md:grid md:grid-cols-2 grid grid-cols-2 gap-4 mx-4  my-15 pb-10 justify-between">
+                <div className="grid grid-cols-1 gap-4 mx-4 my-15 pb-10 justify-between md:grid md:grid-cols-2 md:overflow-visible overflow-x-scroll whitespace-nowrap">
                     {[PartnerOne, PartnerTwo, PartnerThree, PartnerFour].map((partner, index) => (
                         <div 
                             key={index} 
-                            className="relative overflow-hidden rounded-md cursor-pointer"
+                            className="relative inline-block overflow-hidden rounded-md cursor-pointer"
                             onClick={() => openModal(partner.src)}
                         >
                             <Image
@@ -49,7 +49,7 @@ import { motion } from "framer-motion";
                                 alt={`Partner ${index + 1}`}
                                 height={400}
                                 width={900}
-                                className="transition-all duration-300 h-70 hover:scale-105 object-cover "
+                                className="transition-all duration-300 h-70 hover:scale-105 object-cover object-[50%_75%]"
                             />
                         </div>
                     ))}

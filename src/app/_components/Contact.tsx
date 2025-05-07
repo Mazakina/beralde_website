@@ -11,7 +11,7 @@ export default function Contact() {
         z-10 bg-baseblue 
         relative 
         mx-auto  sm:mx-auto my-24 
-        rounded-lg min-w-3/5 
+        rounded-lg min-w-[55%] 
         text-white md:flex-row 
         items-center 
         justify-center md:justify-start w-fit ">
@@ -21,6 +21,7 @@ export default function Contact() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{delay:0.4, duration: 0.8 }}
                     className="text-3xl font-bold mb-7"
+                    viewport={{ once: true }}
                 >
                     Faça Parte da Nossa História
                 </motion.h4>
@@ -29,6 +30,8 @@ export default function Contact() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{delay:0.4, duration: 0.8 }}
                     className="font-bold text-base mb-4 md:mb-24"
+                    viewport={{ once: true }}
+
                 >
                     Junte-se a nós na missão de fornecer os melhores produtos agrícolas para sua mesa.
                 </motion.p>
@@ -38,6 +41,8 @@ export default function Contact() {
                     transition={{ duration: 0.8, type: "spring", stiffness: 300, damping: 20 }}
                     whileHover={{ scale: 1.1, }} 
                     whileTap={{ scale: 0.9 }}   
+                    viewport={{ once: true }}
+
                 >
                     <MotionLink
                         href={"https://w.app/beralde"}
@@ -56,9 +61,9 @@ export default function Contact() {
                     </MotionLink>
                 </motion.div>
             </div>
-            <div className="md:absolute mt-6 md:mt-0 scale-90 md:scale-100 h-full flex items-center md:-right-25 justify-center">
+            <div className="lg:absolute mt-6 lg:mt-0 scale-90 lg:scale-100 h-full flex items-center lg:-right-25 justify-center">
                 <img 
-                className="hover:brightness-110 h-full md:scale-120  transition-all duration-200 "
+                className="hover:brightness-110 h-full lg:scale-120  transition-all duration-200 "
                 alt="logo beralde" 
                 src={logo.src} 
                 />
