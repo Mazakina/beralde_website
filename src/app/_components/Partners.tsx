@@ -5,6 +5,7 @@ import PartnerTwo from "@/public/parceiros/02.png";
 import PartnerThree from "@/public/parceiros/03.png";
 import PartnerFour from "@/public/parceiros/04.png";   
 import { useState } from "react";
+import { motion } from "framer-motion";
 
     export default function Partners() {
         const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,21 +23,35 @@ import { useState } from "react";
 
         return (
             <div className="flex bg-white text-black flex-col items-center justify-center w-full ">
-                <h2 className="px-6 text-5xl my-8 text-center">Você está em boa companhia!</h2>
-                <span className="text-4xl px-4 text-center font-light max-w-[960px]">
+                <motion.h2 
+                initial={{ opacity: 0, x: -200 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="px-6 text-5xl my-8 text-center">Você está em boa companhia!</motion.h2>
+                <motion.span 
+                initial={{ opacity: 0, x: 200 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                viewport={{ once: true }}
+                className="text-4xl px-4 text-center font-light max-w-[960px]">
                 Parceiros em todo o estado confiam na Beralde para levar frescor e eficiência aos seus negócios.
-                </span>
-                <div className="md:grid md:grid-cols-2 grid grid-cols-2  my-15 pb-10 justify-between">
+                </motion.span>
+                <div className="md:grid md:grid-cols-2 grid grid-cols-2 gap-4 mx-4  my-15 pb-10 justify-between">
                     {[PartnerOne, PartnerTwo, PartnerThree, PartnerFour].map((partner, index) => (
-                        <Image
-                            key={index}
-                            src={partner.src}
-                            alt={`Partner ${index + 1}`}
-                            height={400}
-                            width={900}
-                            className="transition-transform duration-300 h-70 object-cover hover:scale-110 cursor-pointer"
+                        <div 
+                            key={index} 
+                            className="relative overflow-hidden rounded-md cursor-pointer"
                             onClick={() => openModal(partner.src)}
-                        />
+                        >
+                            <Image
+                                src={partner.src}
+                                alt={`Partner ${index + 1}`}
+                                height={400}
+                                width={900}
+                                className="transition-all duration-300 h-70 hover:scale-105 object-cover "
+                            />
+                        </div>
                     ))}
                 </div>
 

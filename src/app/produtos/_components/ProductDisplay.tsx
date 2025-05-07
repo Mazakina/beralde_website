@@ -5,6 +5,7 @@ import Product from "./Product";
 import { ProductsProps } from "@/types/types";
 import { IoIosSearch } from "react-icons/io";
 import { useSearchParams } from "next/navigation";
+import { motion } from "framer-motion";
 
 export function useInitialFilter() {
     const searchParams = useSearchParams();
@@ -107,8 +108,19 @@ function ProductDisplayContent({ handleProductClick }: ProductDisplayProps) {
                     ))} 
                 </div>
             </section>
-            <section
-                className="w-full grid sm:grid-cols-2 md:grid-cols-3 my-auto mb-auto mt-6 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-10 pb-12 overflow-y-auto"
+            <motion.section
+                initial="hidden"
+                animate="visible"
+                variants={{
+                    hidden: { opacity: 0 },
+                    visible: {
+                        opacity: 1,
+                        transition: {
+                            staggerChildren: 0.2,
+                        },
+                    },
+                }}
+                className="w-full grid sm:grid-cols-2 md:grid-cols-3 my-auto mb-auto mt-6 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-10 pb-12 "
                 onScroll={(e) => {
                     const target = e.target as HTMLDivElement;
                     if (target.scrollHeight - target.scrollTop === target.clientHeight) {
@@ -132,7 +144,7 @@ function ProductDisplayContent({ handleProductClick }: ProductDisplayProps) {
                                 />
                             ) : null
                     )}
-            </section>
+            </motion.section>
         </div>
     );
 }
