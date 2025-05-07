@@ -14,7 +14,7 @@ const AboutSection = () => {
       <h2 className="text-4xl font-bold text-green-800 mb-4">🏡 Nossas Raízes</h2>
       <p className="text-xl md:text-left text-gray-700">
         A <strong>Beralde Verduras</strong> nasceu no quintal do nosso sítio em Ibiúna, movida por um amor antigo pela terra. 
-        Nossa ligação com o campo vem de Londrina, no Paraná, onde nossa família planta há mais de 90 anos. Cultivamos café, 
+        Nossa ligação com o campo vem de Londrina, no Paraná, onde nossa família planta há mais de 90 anos. Cultivávamos café, 
         soja, trigo e, hoje, hortaliças frescas com a mesma paixão que nos acompanha desde a infância. Essa herança nos ensinou 
         a cuidar da terra e de quem consome o que ela nos dá.
       </p>
