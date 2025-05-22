@@ -22,10 +22,12 @@ export default function Product({product,handleProductClick}: ProductProps) {
             whileHover={{ scale: 1.05, }}
         className="
             group
-            flex w-[200px] h-[240px] overflow-hidden 
+            flex sm:w-[270px] md:w-[200px] w-[100%] h-[360px] sm:h-[240px] overflow-hidden 
+            max-w-[380px]
             rounded flex-col items-center
             mx-auto 
             cursor-pointer border-2
+            bg-[#fffffff5]
             border-gray-300 
             hover:border-green-300
             shadow-sm
@@ -35,12 +37,23 @@ export default function Product({product,handleProductClick}: ProductProps) {
             {
             image_path && (
                 <Image  alt={name} src={image_path2}  
-                className="group-hover:scale-105 object-contain group-hover:brightness-105 transition-all my-auto w-40 h-40" height={160} width={160}/>
+                className="
+                group-hover:scale-105 
+                object-contain 
+                group-hover:brightness-105 
+                transition-all 
+                my-auto 
+                w-[80%] h-[80%] 
+                max-w-[270px] 
+                min-w-40 min-h-40 
+                sm:w-50 sm:h-50
+                md:w-40 md:h-40" 
+                height={160} width={160}/>
                 )
             }
             {
                 !image_path && (
-                    <MdOutlineImageNotSupported className="text-gray-300 w-40 h-40"/>
+                    <MdOutlineImageNotSupported className="text-gray-300 m-auto w-40 h-40"/>
                 )
             }
             <div className="h-[2px] group-hover:bg-green-300 mt-auto transition-all bg-gray-300 w-4/5 group-hover:w-full px-4"/>

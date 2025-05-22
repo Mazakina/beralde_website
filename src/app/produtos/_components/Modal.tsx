@@ -37,7 +37,7 @@ export default function Modal({ product, onClose }: ModalProps) {
             transition={{ duration: 0.3 }}
         >
             <motion.div 
-            className="bg-white max-w-[720px] h-fit md:max-h-[416px] py-6 w-[90%] max-h-[7 0vh] mt-18 md:h-[90%] m-auto rounded-lg"
+            className="bg-[#eceff3] max-w-[720px] h-fit md:max-h-[416px] py-6 w-[90%] max-h-[7 0vh]  md:h-[90%] m-auto mt-20 sm:mt-auto rounded-lg"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}

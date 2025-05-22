@@ -58,8 +58,8 @@ function ProductDisplayContent({ handleProductClick }: ProductDisplayProps) {
     }
 
     return (
-        <div className="relative w-[95%] min-h-screen lg:w-[90%] border-none xl:w-4/5 mx-auto mb-auto pb-16 justify-center flex flex-col items-center">
-            <h2 className="font-bold text-4xl mb-10 mt-14">Nossos Produtos</h2>
+        <div className=" relative w-[95%] min-h-screen lg:w-[90%] border-none xl:w-4/5 mx-auto mb-auto pb-16 justify-center flex flex-col items-center">
+            <h2 className="font-bold text-4xl mb-10 mt-14 text-white">Nossos Produtos</h2>
 
             <section
                 id="filter"

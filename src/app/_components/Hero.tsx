@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import hero from "@/public/hero.jpeg";
+import hero from "@/public/hero.jpg";
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";

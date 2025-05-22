@@ -34,7 +34,7 @@ export default function Produtos(){
             />
 
             <div
-            className="z-10 relative bg-white w-full flex justify-center items-center text-center"
+            className="z-10 relative bg-[#2a548be5] w-full flex justify-center items-center text-center"
             >
             <Image
                 src="/sun.svg"

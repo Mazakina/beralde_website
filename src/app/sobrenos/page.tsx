@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { RiMedalLine,RiLeafLine } from "react-icons/ri";
 import { FaPeopleGroup } from "react-icons/fa6";
-import historia from "@/public/historia.png";
+import historia from "@/public/historia.jpeg";
 import FullBg from "@/public/full-bg.png";
 import Contact from "../_components/Contact";
 import Footer from "@/components/Footer";
