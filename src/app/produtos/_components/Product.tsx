@@ -22,7 +22,7 @@ export default function Product({product,handleProductClick}: ProductProps) {
             whileHover={{ scale: 1.05, }}
         className="
             group
-            flex sm:w-[270px] md:w-[200px] w-[100%] h-[360px] sm:h-[240px] overflow-hidden 
+            flex sm:w-[270px] md:w-[280px] w-[100%] md:h-[360px] sm:h-[240px] overflow-hidden 
             max-w-[380px]
             rounded flex-col items-center
             mx-auto 
@@ -47,7 +47,7 @@ export default function Product({product,handleProductClick}: ProductProps) {
                 max-w-[270px] 
                 min-w-40 min-h-40 
                 sm:w-50 sm:h-50
-                md:w-40 md:h-40" 
+                md:w-70 md:h-70" 
                 height={160} width={160}/>
                 )
             }

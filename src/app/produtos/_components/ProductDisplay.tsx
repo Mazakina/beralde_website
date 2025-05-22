@@ -120,7 +120,7 @@ function ProductDisplayContent({ handleProductClick }: ProductDisplayProps) {
                         },
                     },
                 }}
-                className="w-full grid sm:grid-cols-2 md:grid-cols-3 my-auto mb-auto mt-6 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-10 pb-12 "
+                className="w-full grid sm:grid-cols-2 md:grid-cols-3 my-auto mb-auto mt-6 lg:grid-cols-4 xl:grid-cols-4 gap-4 md:gap-10 pb-12 "
                 onScroll={(e) => {
                     const target = e.target as HTMLDivElement;
                     if (target.scrollHeight - target.scrollTop === target.clientHeight) {
