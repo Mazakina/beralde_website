@@ -49,11 +49,11 @@ export default function Modal({ product, onClose }: ModalProps) {
             </div>
             <div className="h-[2px]  mt-3 mb-2 transition-all bg-gray-300 w-full "/>
             <div className="flex flex-col md:grid overflow-y-auto md:grid-cols-2  md:grid-rows-1 h-[90%] py-2 px-8">
-                <div className="col-span-1 row-span-1 mx-auto w-full h-full flex justify-center items-center min-h-[160px] relative">
-                {imagePath?
-                <Image className="object-contain" src={`${imagePath}?v=${process.env.NEXT_PUBLIC_IMAGE_VERSION}`} fill alt={""}/>:
-                <MdOutlineImageNotSupported className="text-gray-300 m-auto w-40 h-40"/>
-                }
+                <div className="col-span-1 row-span-1 mx-auto w-full h-full flex justify-center items-center min-h-[200px] relative">
+                    {imagePath?
+                    <Image className="object-contain "  src={`${imagePath}?v=${process.env.NEXT_PUBLIC_IMAGE_VERSION}`} fill alt={""}/>:
+                    <MdOutlineImageNotSupported className="text-gray-300 m-auto w-40 h-40"/>
+                    }
                 </div>
                 <div className="flex flex-col ml-2 mr-auto items-start justify-around overflow-y-auto max-h-[90%]">
                 <span className="text-left my-auto" style={{ textAlign: "left" }}>{description}</span>
