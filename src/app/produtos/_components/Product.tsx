@@ -36,7 +36,7 @@ export default function Product({product,handleProductClick}: ProductProps) {
             ">
             {
             image_path && (
-                <Image  alt={name} src={image_path2}  
+                <Image  alt={name} src={`${image_path2}?v=${process.env.NEXT_PUBLIC_IMAGE_VERSION}`}  
                 className="
                 group-hover:scale-105 
                 object-contain 

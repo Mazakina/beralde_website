@@ -51,7 +51,7 @@ export default function Modal({ product, onClose }: ModalProps) {
             <div className="flex flex-col md:grid overflow-y-auto md:grid-cols-2  md:grid-rows-1 h-[90%] py-2 px-8">
                 <div className="col-span-1 row-span-1 mx-auto w-full h-full flex justify-center items-center min-h-[160px] relative">
                 {imagePath?
-                <Image className="object-contain" src={imagePath} fill alt={""}/>:
+                <Image className="object-contain" src={`${imagePath}?v=${process.env.NEXT_PUBLIC_IMAGE_VERSION}`} fill alt={""}/>:
                 <MdOutlineImageNotSupported className="text-gray-300 m-auto w-40 h-40"/>
                 }
                 </div>
