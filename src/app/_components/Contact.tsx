@@ -45,7 +45,7 @@ export default function Contact() {
 
                 >
                     <MotionLink
-                        href={"https://w.app/beralde"}
+                        href={"https://api.whatsapp.com/send/?phone=5511941113536&text=Ol%C3%A1%21+tenho+interesse+em+conhecer+melhor+as+op%C3%A7%C3%B5es+de+verduras+da+sua+distribuidora.+Poderia+me+ajudar%3F+&type=phone_number&app_absent=0"}
                         target="_blank"
                         className="
                         p-4 rounded-md 

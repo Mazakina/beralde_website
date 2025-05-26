@@ -89,7 +89,9 @@ export function MobileHeader() {
               </Link>
               <Link 
                   onClick={() => setIsDrawerOpen(false)}
-                  href={"https://w.app/beralde"} target="_blank"  className="mb-4 text-lg font-medium text-gray-800">
+                  href={"https://api.whatsapp.com/send/?phone=5511941113536&text=Ol%C3%A1%21+tenho+interesse+em+conhecer+melhor+as+op%C3%A7%C3%B5es+de+verduras+da+sua+distribuidora.+Poderia+me+ajudar%3F+&type=phone_number&app_absent=0"} 
+                  target="_blank"  
+                  className="mb-4 text-lg font-medium text-gray-800">
                   Vire um cliente
               </Link>
           </motion.div>

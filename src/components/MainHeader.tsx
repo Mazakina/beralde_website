@@ -92,7 +92,8 @@ export default function MainHeader() {
                     Sobre nós
                 </Link>
                 <Link
-                    href={"https://w.app/beralde"} target="_blank"
+                    href={"https://api.whatsapp.com/send/?phone=5511941113536&text=Ol%C3%A1%21+tenho+interesse+em+conhecer+melhor+as+op%C3%A7%C3%B5es+de+verduras+da+sua+distribuidora.+Poderia+me+ajudar%3F+&type=phone_number&app_absent=0"}
+                    target="_blank"
                     className="
                         ml-4
                         relative text-lg after:absolute after:bottom-0 after:left-0 

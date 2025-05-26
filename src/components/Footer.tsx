@@ -19,7 +19,7 @@ export default function Footer() {
                     <p className="group flex items-center"><FaPhone className="mr-2"/>(11) 94111-3536</p>
                     <p className="group flex items-center"><FaPhone className=" mr-2"/>(11) 96080-7100</p>
                     <Link 
-                    href={"https://w.app/beralde"} 
+                    href={"https://api.whatsapp.com/send/?phone=5511941113536&text=Ol%C3%A1%21+tenho+interesse+em+conhecer+melhor+as+op%C3%A7%C3%B5es+de+verduras+da+sua+distribuidora.+Poderia+me+ajudar%3F+&type=phone_number&app_absent=0"} 
                     target="_blank" 
                     className="py-2 px-6 mt-6 
                     font-bold text-white 
@@ -62,7 +62,7 @@ export default function Footer() {
                         Sobre Nós
                     </Link>
                     <Link 
-                        href="https://w.app/beralde"
+                        href="https://api.whatsapp.com/send/?phone=5511941113536&text=Ol%C3%A1%21+tenho+interesse+em+conhecer+melhor+as+op%C3%A7%C3%B5es+de+verduras+da+sua+distribuidora.+Poderia+me+ajudar%3F+&type=phone_number&app_absent=0"
                         target="_blank"
                         className="transition-all duration-200 hover:pl-3"
                     >
