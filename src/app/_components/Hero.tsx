@@ -19,7 +19,7 @@ export default function Hero() {
       />
       <motion.div className="z-10 relative max-w-4/5">
         <motion.h1
-          className={`z-10 text-4xl sm:text-5xl md:text-6xl mb-8`}
+          className={`z-10 text-4xl text-white sm:text-5xl md:text-6xl mb-8`}
           initial={{ opacity: 0, bottom: "-100px", position: "relative" }}
           animate={{ opacity: 1, bottom: "0px", position: "relative" }}
           transition={{ opacity: { duration: 0.5 }, bottom: { duration: 0.5 } }}
@@ -28,7 +28,7 @@ export default function Hero() {
           negócio
         </motion.h1>
         <motion.p
-          className={`mb-4 text-lg sm:text-xl md:text-2xl`}
+          className={`mb-4 text-white text-lg sm:text-xl md:text-2xl`}
           initial={{ opacity: 0, bottom: "-100px", position: "relative" }}
           animate={{ opacity: 1, bottom: "0px", position: "relative" }}
           transition={{ opacity: { duration: 0.6 }, bottom: { duration: 0.6 } }}
@@ -37,7 +37,7 @@ export default function Hero() {
           você!
         </motion.p>
         <motion.p
-          className={`text-lg sm:text-xl md:mb-18 mb-12 md:text-2xl`}
+          className={`text-lg text-white sm:text-xl md:mb-18 mb-12 md:text-2xl`}
           initial={{ opacity: 0, bottom: "-100px", position: "relative" }}
           animate={{ opacity: 1, bottom: "0px", position: "relative" }}
           transition={{ opacity: { duration: 0.7 }, bottom: { duration: 0.7 } }}
