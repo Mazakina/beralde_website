@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# 🌿 Beralde Verduras - Catálogo Online
 
-First, run the development server:
+Este é o repositório do site da **Beralde Verduras**, uma distribuidora de hortaliças frescas. O site foi desenvolvido com **Next.js**, utilizando **Framer Motion** para animações modernas e **Supabase** como banco de dados. Ele serve como **vitrine digital** da empresa, voltada à **captação de clientes B2B** (restaurantes, mercados, hortifrutis e outros estabelecimentos).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Funcionalidades
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Landing page responsiva** com apresentação da empresa e chamada para contato
+- **Catálogo de produtos** com imagens e descrições (ex: verduras embaladas, folhagens frescas, etc.)
+- **Página "Sobre nós"** com a história, missão e valores da distribuidora
+- **Animações suaves** com Framer Motion para uma experiência agradável e fluida
+- **Integração com Supabase** para armazenar e exibir os dados do catálogo
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎯 Objetivo
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+O site foi projetado exclusivamente como **vitrine digital** da Beralde Verduras para atrair **clientes empresariais (B2B)** interessados em comprar no atacado. Não há funcionalidades de compra ou login – o foco está na **apresentação institucional e no catálogo**.
 
-## Learn More
+## 🛠️ Tecnologias Utilizadas
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js](https://nextjs.org/) — Framework React com renderização híbrida (SSR + SSG)
+- [Framer Motion](https://www.framer.com/motion/) — Animações declarativas para React
+- [Supabase](https://supabase.io/) — Backend-as-a-Service com PostgreSQL
+- [Tailwind CSS](https://tailwindcss.com/) — Estilização com classes utilitárias
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚧 Em desenvolvimento
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Melhorias futuras planejadas:
+- Página de contato com formulário direto para e-mail ou Supabase Functions
+- Otimizações de SEO e carregamento
