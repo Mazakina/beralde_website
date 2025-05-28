@@ -18,10 +18,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href={favicon.src} />
+        <meta name="color-scheme" content="only light" />
       </head>
-      <body
-        className={` w-full overflow-x-hidden  antialiased ${interFont}`}
-      >
+      <body className={` w-full overflow-x-hidden  antialiased ${interFont}`}>
         <Header />
         {children}
       </body>
