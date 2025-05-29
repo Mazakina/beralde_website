@@ -13,7 +13,7 @@ interface ModalProps {
   onClose: () => void;
 }
 export default function Modal({ product, onClose }: ModalProps) {
-  const { name, description, subTypes, imagePath, available } =
+  const { name, description, subTypes, imagePath } =
     ProductMapper.fromDatabase(product);
 
   useEffect(() => {
