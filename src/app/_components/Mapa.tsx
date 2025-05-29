@@ -1,8 +1,16 @@
+"use client";
+import { motion } from "framer-motion";
 import { MdLocationPin } from "react-icons/md";
 
 export default function Mapa() {
   return (
-    <div className="w-full bg-[#ffffff00] flex">
+    <motion.div
+      className="w-full bg-[#ffffff00] flex"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
       <div
         className=" 
       h-fit 
@@ -58,7 +66,7 @@ export default function Mapa() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 // This component renders a Google Map embedded in an iframe with specific dimensions and styles.
