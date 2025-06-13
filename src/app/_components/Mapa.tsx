@@ -59,9 +59,9 @@ export default function Mapa() {
               </p>
             </div>
             <p className="pt-3">
-              São Paulo, Guarulhos, São Caetano do Sul, São Bernardo, Santo
-              André, Taboão da Serra, Cubatao , São Vicente, Praia Grande,
-              santos , mongagua , itanhaen , suzano , Aruja, POA.
+              São Paulo, Santo André, São Bernardo do Campo, São Caetano do Sul,
+              Guarulhos, Cajamar, Taboão da Serra, Arujá, Poá, Suzano, Santos,
+              São Vicente, Cubatão, Praia Grande, Mongaguá, Itanhaém.
             </p>
           </div>
         </div>

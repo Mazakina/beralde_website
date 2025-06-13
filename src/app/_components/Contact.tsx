@@ -5,8 +5,9 @@ import logo from "@/public/beralde.png";
 import { motion } from "framer-motion";
 
 export default function Contact() {
-    return (
-        <div className="
+  return (
+    <div
+      className="
         flex flex-col-reverse 
         z-10 bg-baseblue 
         relative 
@@ -14,40 +15,47 @@ export default function Contact() {
         rounded-lg min-w-[55%] 
         text-white md:flex-row 
         items-center 
-        justify-center md:justify-start w-fit ">
-            <div className="flex px-2 m-4 mb-8 md:m-15 flex-col mr-auto w-[320px]">
-                <motion.h4
-                    initial={{ opacity: 0, x: 100 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{delay:0.4, duration: 0.8 }}
-                    className="text-3xl font-bold mb-7"
-                    viewport={{ once: true }}
-                >
-                    Faça Parte da Nossa História
-                </motion.h4>
-                <motion.p
-                    initial={{ opacity: 0, y: 100 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{delay:0.4, duration: 0.8 }}
-                    className="font-bold text-base mb-4 md:mb-24"
-                    viewport={{ once: true }}
-
-                >
-                    Junte-se a nós na missão de fornecer os melhores produtos agrícolas para sua mesa.
-                </motion.p>
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8, type: "spring", stiffness: 300, damping: 20 }}
-                    whileHover={{ scale: 1.1, }} 
-                    whileTap={{ scale: 0.9 }}   
-                    viewport={{ once: true }}
-
-                >
-                    <MotionLink
-                        href={"https://api.whatsapp.com/send/?phone=5511941113536&text=Ol%C3%A1%21+tenho+interesse+em+conhecer+melhor+as+op%C3%A7%C3%B5es+de+verduras+da+sua+distribuidora.+Poderia+me+ajudar%3F+&type=phone_number&app_absent=0"}
-                        target="_blank"
-                        className="
+        justify-center md:justify-start w-fit "
+    >
+      <div className="flex px-2 m-4 mb-8 md:m-15 flex-col mr-auto w-[320px]">
+        <motion.h4
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+          className="text-3xl font-bold mb-7"
+          viewport={{ once: true }}
+        >
+          Faça Parte da Nossa História
+        </motion.h4>
+        <motion.p
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+          className="font-bold text-base mb-4 md:mb-24"
+          viewport={{ once: true }}
+        >
+          Junte-se a nós na missão de fornecer os melhores produtos agrícolas
+          para o seu negócio.
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.8,
+            type: "spring",
+            stiffness: 300,
+            damping: 20,
+          }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          viewport={{ once: true }}
+        >
+          <MotionLink
+            href={
+              "https://api.whatsapp.com/send/?phone=5511941113536&text=Ol%C3%A1%21+tenho+interesse+em+conhecer+melhor+as+op%C3%A7%C3%B5es+de+verduras+da+sua+distribuidora.+Poderia+me+ajudar%3F+&type=phone_number&app_absent=0"
+            }
+            target="_blank"
+            className="
                         p-4 rounded-md 
                         cursor-pointer font-bold
                         flex items-center justify-center border-2 
@@ -56,19 +64,18 @@ export default function Contact() {
                         border-c-mainOrange hover:border-baseblue
                         hover:text-baseblue
                         "
-                    >
-                        <p>Entre em contato</p>
-                    </MotionLink>
-                </motion.div>
-            </div>
-            <div className="lg:absolute mt-6 lg:mt-0 scale-90 lg:scale-100 h-full flex items-center lg:-right-25 justify-center">
-                <img 
-                className="hover:brightness-110 h-full lg:scale-120  transition-all duration-200 "
-                alt="logo beralde" 
-                src={logo.src} 
-                />
-            </div>
-        </div>
-
-    )
+          >
+            <p>Entre em contato</p>
+          </MotionLink>
+        </motion.div>
+      </div>
+      <div className="lg:absolute mt-6 lg:mt-0 scale-90 lg:scale-100 h-full flex items-center lg:-right-25 justify-center">
+        <img
+          className="hover:brightness-110 h-full lg:scale-120  transition-all duration-200 "
+          alt="logo beralde"
+          src={logo.src}
+        />
+      </div>
+    </div>
+  );
 }
